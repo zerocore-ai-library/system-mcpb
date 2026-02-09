@@ -11,15 +11,11 @@
   },
   "server": {
     "type": "binary",
-    "entry_point": "dist/system-linux-x86_64",
+    "entry_point": "dist/system",
     "mcp_config": {
-      "command": "${__dirname}/dist/system-linux-x86_64",
+      "command": "${__dirname}/dist/system",
       "args": [],
-      "env": {},
-      "platform_overrides": {
-        "darwin": { "command": "${__dirname}/dist/system-darwin-arm64" },
-        "linux": { "command": "${__dirname}/dist/system-linux-x86_64" }
-      }
+      "env": {}
     }
   },
   "tools": [
@@ -36,23 +32,10 @@
       "description": "Generate a random integer within an inclusive range [min, max]"
     }
   ],
-  "compatibility": {
-    "platforms": ["darwin", "linux"]
-  },
   "_meta": {
     "store.tool.mcpb": {
       "scripts": {
         "build": "cargo build --release"
-      },
-      "mcp_config": {
-        "platform_overrides": {
-          "darwin-arm64": { "command": "${__dirname}/dist/system-darwin-arm64" },
-          "linux-arm64": { "command": "${__dirname}/dist/system-linux-arm64" },
-          "linux-x86_64": { "command": "${__dirname}/dist/system-linux-x86_64" }
-        }
-      },
-      "compatibility": {
-        "platforms": ["darwin-arm64", "linux-arm64", "linux-x86_64"]
       },
       "static_responses": {
         "tools/list": {
