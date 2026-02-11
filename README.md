@@ -4,7 +4,7 @@ An MCP server providing system utilities for AI agents including sleep, datetime
 
 ## Tools
 
-### `system__sleep`
+### `sleep`
 
 Pause execution for a specified duration.
 
@@ -18,7 +18,7 @@ Pause execution for a specified duration.
 |-------|------|-------------|
 | `slept_ms` | integer | Actual duration slept in milliseconds |
 
-### `system__get_datetime`
+### `get_datetime`
 
 Get the current UTC date and time.
 
@@ -30,7 +30,7 @@ Get the current UTC date and time.
 | `iso8601` | string | UTC timestamp in ISO 8601 format |
 | `unix_ms` | integer | Unix timestamp in milliseconds |
 
-### `system__get_random_integer`
+### `get_random_integer`
 
 Generate a random integer within an inclusive range.
 
@@ -63,17 +63,17 @@ tool validate /path/to/system
 
 ```bash
 # Test getting current time
-tool call /path/to/system -m system__get_datetime
+tool call /path/to/system -m get_datetime
 ```
 
 ```bash
 # Generate a random number
-tool call /path/to/system -m system__get_random_integer -p min=1 -p max=100
+tool call /path/to/system -m get_random_integer -p min=1 -p max=100
 ```
 
 ```bash
 # Sleep for 1 second
-tool call /path/to/system -m system__sleep -p duration_ms=1000
+tool call /path/to/system -m sleep -p duration_ms=1000
 ```
 
 ### Manual Build

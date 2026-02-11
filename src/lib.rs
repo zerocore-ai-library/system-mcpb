@@ -134,7 +134,7 @@ impl Default for Server {
 impl Server {
     /// Pauses execution for a specified duration.
     #[tool(
-        name = "system__sleep",
+        name = "sleep",
         description = "Pause execution for a specified duration in milliseconds."
     )]
     async fn sleep(&self, params: Parameters<SleepInput>) -> Result<Json<SleepOutput>, McpError> {
@@ -153,7 +153,7 @@ impl Server {
 
     /// Returns the current UTC date and time.
     #[tool(
-        name = "system__get_datetime",
+        name = "get_datetime",
         description = "Get the current UTC date and time."
     )]
     async fn get_datetime(
@@ -170,7 +170,7 @@ impl Server {
 
     /// Generates a cryptographically secure random integer within an inclusive range.
     #[tool(
-        name = "system__get_random_integer",
+        name = "get_random_integer",
         description = "Generate a random integer within an inclusive range [min, max]."
     )]
     async fn get_random_integer(

@@ -27,22 +27,22 @@
   },
   "tools": [
     {
-      "name": "system__sleep",
+      "name": "sleep",
       "description": "Pause execution for a specified duration in milliseconds"
     },
     {
-      "name": "system__get_datetime",
+      "name": "get_datetime",
       "description": "Get the current UTC date and time"
     },
     {
-      "name": "system__get_random_integer",
+      "name": "get_random_integer",
       "description": "Generate a random integer within an inclusive range [min, max]"
     }
   ],
   "_meta": {
     "store.tool.mcpb": {
       "scripts": {
-        "build": "cargo build --release"
+        "build": "cargo build --release && mkdir -p dist && cp target/release/system dist/"
       },
       "compatibility": {
         "platforms": [
@@ -58,7 +58,7 @@
         "tools/list": {
           "tools": [
             {
-              "name": "system__sleep",
+              "name": "sleep",
               "description": "Pause execution for a specified duration in milliseconds",
               "input_schema": {
                 "type": "object",
@@ -86,7 +86,7 @@
               }
             },
             {
-              "name": "system__get_datetime",
+              "name": "get_datetime",
               "description": "Get the current UTC date and time",
               "input_schema": {
                 "type": "object",
@@ -112,7 +112,7 @@
               }
             },
             {
-              "name": "system__get_random_integer",
+              "name": "get_random_integer",
               "description": "Generate a random integer within an inclusive range [min, max]",
               "input_schema": {
                 "type": "object",
