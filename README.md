@@ -4,45 +4,33 @@ An MCP server providing system utilities for AI agents including sleep, datetime
 
 ## Setup
 
-### Using tool CLI (Recommended)
+### Using tool CLI
 
-Install from https://github.com/zerocore-ai/tool-cli
+Install the CLI from https://github.com/zerocore-ai/tool-cli
 
 ```bash
-# Build the tool
-tool run build /path/to/system
+# Install from tool.store
+tool install library/system
 ```
 
 ```bash
-# Validate the manifest
-tool validate /path/to/system
+# View available tools
+tool info library/system
 ```
 
 ```bash
-# Test getting current time
-tool call /path/to/system -m get_datetime
+# Get current time
+tool call library/system -m get_datetime
 ```
 
 ```bash
 # Generate a random number
-tool call /path/to/system -m get_random_integer -p min=1 -p max=100
+tool call library/system -m get_random_integer -p min=1 -p max=100
 ```
 
 ```bash
 # Sleep for 1 second
-tool call /path/to/system -m sleep -p duration_ms=1000
-```
-
-### Manual Build
-
-```bash
-cargo build --release
-```
-
-## Testing
-
-```bash
-cargo test
+tool call library/system -m sleep -p duration_ms=1000
 ```
 
 ## Tools
