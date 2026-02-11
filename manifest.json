@@ -41,6 +41,8 @@
   ],
   "_meta": {
     "store.tool.mcpb": {
+      "runtime": "rust",
+      "categories": ["utilities"],
       "scripts": {
         "build": "cargo build --release && mkdir -p dist && cp target/release/system dist/"
       },
