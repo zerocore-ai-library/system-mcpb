@@ -78,4 +78,4 @@ Generate a random integer within an inclusive range.
 
 ## License
 
-MIT
+Apache-2.0
